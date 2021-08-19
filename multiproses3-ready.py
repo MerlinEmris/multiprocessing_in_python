@@ -19,7 +19,7 @@ def parallel(san1: int, san2: int) -> float:
     results = [pool.map(fib, (x for x in range(san1-1, san2)))]
     b = time.time()
     print("parallel: "+str(results))
-    print(f'parallel wagt {b-a}')
+    print(f'parallel time:{b-a}')
     return b-a
 
 
@@ -29,29 +29,30 @@ def normal(san1: int, san2: int) -> float:
     for x in range(san1-1, san2):
         result.append(fib(x))
     b = time.time()
-    print("adaty: "+str(result))
-    print(f'adaty wagt {b-a}')
+    print("series: "+str(result))
+    print(f'series time:{b-a}')
     return b-a
 
 
 def resulter(san1: int, san2: int) -> tuple:
     b = parallel(san1, san2)
     a = normal(san1, san2)
-    print(f'adatynyň parallel wagt gatnaşygy:{a/b}')
+    print(f'delta time (series/parallel):{a/b}')
     return (san1, san2, a, b, a/b)
 
 
 def main():
     data_start = 0
     data_end = 0
+    print(f"cpu core count:{mp.cpu_count()}")
     try:
         data_start = int(sys.argv[1])
         data_end = int(sys.argv[2])
-        print(f"value set to {data_start} - {data_end}")
+        print(f"values are {data_start} - {data_end}")
     except:
         data_start = 10
         data_end = 16
-        print("value set to 10 - 16")
+        print("values are 10 - 16")
     data = []
     data.append(resulter(data_start, data_end))
     filename = 'result.json'
