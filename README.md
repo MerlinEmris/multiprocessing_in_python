@@ -28,7 +28,7 @@ git clone https://github.com/MerlinEmris/multiprocessing_in_python.git
 ```
 
 ```bash
-python multiproses3-ready.py
+python multiproces\multiprocess.py
 ```
 
 ---
@@ -39,13 +39,13 @@ App gets 2 variables from num to num2
 Application calculates Fibonachi secuence siries as normal python app and in parallel where task is seperated between cpu cores.
 
 ```bash
-python multiproses3-ready.py 12 22
+python multiproces\multiprocess.py 12 22
 ```
 
 ---
 
 ```bash
-python multiproses3-ready.py 1 40
+python multiproces\multiprocess.py 1 40
 ```
 
 ```bash
@@ -66,7 +66,7 @@ delta time (series/parallel):2.325405707032644
 To run tests, run the following command
 
 ```bash
-  python test.py
+  python multiproces\test.py
 ```
 
 ## Acknowledgements
