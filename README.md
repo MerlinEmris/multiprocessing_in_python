@@ -4,9 +4,18 @@ Calculating Fibonachi sequence siries and parallel; time comparizon!
 
 ## Roadmap
 
-- Additional browser support
-
-- Add more integrations
+<ol>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li>
+      <a href="#installation">Installation</a>
+    </li>
+    <li>
+      <a href="#usage/examples">Usage/Examples</a>
+    </li>
+    <li><a href="#running-tests">Running Tests</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    
+  </ol>
 
 ---
 
@@ -37,6 +46,9 @@ python multiproses3-ready.py 12 22
 
 ```bash
 python multiproses3-ready.py 1 40
+```
+
+```bash
 cpu core count:16
 values are 1 - 40
 parallel: [[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,
